@@ -4,22 +4,22 @@ on:
   push:
     branches:
       - master
-  pull-request:
+  pull_request:
     branches:
       - master
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   greetings:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello
       - uses: actions/checkout@v2
+      - name: Hello
         run: echo "Hello!"
         shell: bash
   goodbye:
     runs-on: ubuntu-latest
     steps:
       - name: Bye
-      run: echo "Bye!"
-      shell: bash
+        run: echo "Bye!"
+        shell: bash

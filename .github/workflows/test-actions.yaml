@@ -1,0 +1,25 @@
+name: Testing github actions
+
+on:
+  push:
+    branches:
+      - main
+  pull-request:
+    branches:
+      - main
+  workflow-dispatch:
+
+jobs:
+  greetings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+      - uses: actions/checkout@v2
+        run: echo "Hello!"
+        shell: bash
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bye
+      run: echo "Bye!"
+      shell: bash
